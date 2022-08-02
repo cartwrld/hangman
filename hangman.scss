@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+/*
+   Filename:   hangmsan.css
+   Author:     Carter Walsh (CST148)
+   Date:       2022-07-30
+   Purpose:
+*/
+
+@mixin flexjcai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin white_glass {
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgb(0 0 0 / 25%));
+}
+
+body, header, footer, main, section,
+article, aside, span, img, nav, div,
+ul, li, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+div,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body {
+  @include flexjcai;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  width: 100vw;
+  height: 100vh;
+  //background: url("Malavida-WP-25 2.jpg") no-repeat center;
+  background: url("malavida6.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+#startgame {
+  @include white_glass;
+  position: absolute;
+  padding: 15px 23px;
+  font-size: 1.5em;
+  //font-weight: bold;
+  top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  border: none;
+}
+#resetgame {
+  @include white_glass;
+  position: absolute;
+  padding: 15px;
+  font-size: 1.5em;
+  //font-weight: bold;
+  top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: normal;
+}
+#categories {
+  @include flexjcai;
+  flex-flow: row wrap;
+
+  @include white_glass;
+
+  position: absolute;
+  width: 50%;
+  padding: 15px 23px;
+  top: 20px;
+
+
+  border-radius: 8px;
+}
+.catopt {
+  @include white_glass;
+  padding: 15px;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  border-radius: 8px;
+
+    //filter: drop-shadow(0px 0px 1px rgba(0 0 0 / 0.1));
+}
+.catbtn {
+
+}
+.catopt label {
+
+}
+
+:root {
+  --theme-bg-color: rgb(255 255 255 / 31%);
+  --border-color: rgb(255 255 255 / 35%);
+}
+
+
+#gameboard {
+  @include flexjcai;
+  flex-flow: row wrap;
+  @include white_glass;
+
+  width: 55%;
+  height: 70%;
+  padding: 1%;
+  margin-top: 100px;
+}
+#hangman {
+  @include flexjcai;
+  flex-flow: column wrap;
+
+
+  @include white_glass;
+
+  width: 33%;
+  height: 70%;
+  padding: 1%;
+  margin-top: 100px;
+}
+.hm-bp {
+   @include flexjcai;
+   border: 1px solid black;
+   width: 100px;
+   height: 100px;
+  color: white;
+  background: black;
+}
+.arm {
+  margin-top: -30px;
+  width: 40px;
+  height: 200px;
+
+}
+.leg {
+    margin-top: 90px;
+  width: 40px;
+  height: 200px;
+  margin-left: 16px;
+}
+#hm-upper {
+  display: flex;
+  flex-flow: row wrap;
+    justify-content: center;
+    //align-items: center;
+}
+#hm-head {
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  margin-bottom: -15px;
+}
+#hm-body {
+  width: 40px;
+  height: 300px
+}
+#hm-arm-L {
+  //width: 40px;
+  //height: 200px;
+  margin-right: 33px;
+  transform: rotate(-55deg);
+}
+#hm-arm-R {
+  //width: 40px;
+  //height: 200px;
+  margin-left: 33px;
+  transform: rotate(55deg);
+}
+#hm-leg-L {
+  //width: 40px;
+  //height: 200px;
+
+  transform: rotate(45deg);
+}
+#hm-leg-R {
+  //width: 40px;
+  //height: 200px;
+
+
+  transform: rotate(-45deg);
+}
+
+
+
+#wlSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column nowrap;
+
+  width:  calc(100% - 15px);
+  height: calc(100% - 10px);
+  border-radius: 10px;
+}
+
+#currentWord {
+  @include flexjcai;
+  flex-flow: row wrap;
+
+  width: calc(100% - 40px);
+  height: 60%;
+  //background: crimson;
+  padding: 20px;
+}
+#keyboard {
+  //background: pink;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+    align-content: center;
+  width: 100%;
+  height: 30%;
+
+}
+.keyboardrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background: blue;
+
+  //border: 1px solid white;
+  height: 33.3%;
+}
+
+
+.keyboardBtn {
+  width: 9%;
+  height: 90%;
+  font-size: 3.3em;
+  margin: 0 4px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+}
+
+
+.cwlSlot {
+  //border-bottom: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 3 5%;
+
+  //width: 50px;
+  //height: 50px;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin: 0 10px;
+
+
+  /*   line-height: 0; */
+  /*   padding-bottom: 20px */
+}
+
+#keyboard {
+
+
+
+
+  ////background: #212121;
+  ////width: 630px;
+  ////height: 40%;
+  //display: flex;
+  //flex-flow: column nowrap;
+  //justify-content: center;
+  //align-items: center;
+  ////padding: 10px;
+  //border-bottom-left-radius: 20px;
+  //border-bottom-right-radius: 20px;
+  ////border: 1px solid deeppink;
+  ////margin-right: 30px;
+}
+.keyboardrow {
+
+
+
+
+  //display: flex;
+  //flex-flow: row nowrap;
+  //justify-content: center;
+  //align-items: center;
+  //width: 100%;
+  //height: 30%;
+  ////border: 1px solid blue;
+  ////padding: 10px;
+}
+.keyboardBtn {
+
+
+
+  //margin: 5px 5px;
+  //width: 8%;
+  //  height: 90%;
+  ////min-width: 90px;
+  ////width: calc(7.3% + 10px);
+  ////padding: 3px 0;
+  //border-radius: 8px;
+  ///*   height: calc(auto + 10px); */
+  ///*   padding: 10px; */
+  //font-size: 2.6vw;
+}
+
+
+
+
+//#gameboard {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  margin-left: 30px;
+//  width: 100%;
+//    height: 100%;
+//  //height: 420px;
+//  //width: 630px;
+//  //background: deeppink;
+//  padding: 40px;
+//  border-radius: 20px;
+//}
+
+//#hangman {
+//  filter: invert(1);
+//}
+//#loser {
+//  opacity: 0;
+//}
+
+//@media only screen and (max-width: 500px) {
+//  body {
+//    background: blue;
+//    width: 100vw;
+//    height: 100vh;
+//  }
+//  #cont {
+//    background: lightblue;
+//  }
+//}

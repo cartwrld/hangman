@@ -1,0 +1,250 @@
+/*
+   Filename:   hangmsan.css
+   Author:     Carter Walsh (CST148)
+   Date:       2022-07-30
+   Purpose:
+*/
+body, header, footer, main, section,
+article, aside, span, img, nav, div,
+ul, li, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+div,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  background: url("malavida6.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+#startgame {
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  padding: 15px 23px;
+  font-size: 1.5em;
+  top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+#resetgame {
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  padding: 15px;
+  font-size: 1.5em;
+  top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: normal;
+}
+
+#categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  width: 50%;
+  padding: 15px 23px;
+  top: 20px;
+  border-radius: 8px;
+}
+
+.catopt {
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.25));
+  padding: 15px;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+:root {
+  --theme-bg-color: rgb(255 255 255 / 31%);
+  --border-color: rgb(255 255 255 / 35%);
+}
+
+#gameboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.25));
+  width: 55%;
+  height: 70%;
+  padding: 1%;
+  margin-top: 100px;
+}
+
+#hangman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  border-radius: 15px;
+  background: var(--theme-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  filter: drop-shadow(0px -5px 10px rgba(0, 0, 0, 0.25));
+  width: 33%;
+  height: 70%;
+  padding: 1%;
+  margin-top: 100px;
+}
+
+.hm-bp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  color: white;
+  background: black;
+}
+
+.arm {
+  margin-top: -30px;
+  width: 40px;
+  height: 200px;
+}
+
+.leg {
+  margin-top: 90px;
+  width: 40px;
+  height: 200px;
+  margin-left: 16px;
+}
+
+#hm-upper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#hm-head {
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  margin-bottom: -15px;
+}
+
+#hm-body {
+  width: 40px;
+  height: 300px;
+}
+
+#hm-arm-L {
+  margin-right: 33px;
+  transform: rotate(-55deg);
+}
+
+#hm-arm-R {
+  margin-left: 33px;
+  transform: rotate(55deg);
+}
+
+#hm-leg-L {
+  transform: rotate(45deg);
+}
+
+#hm-leg-R {
+  transform: rotate(-45deg);
+}
+
+#wlSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: calc(100% - 15px);
+  height: calc(100% - 10px);
+  border-radius: 10px;
+}
+
+#currentWord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: calc(100% - 40px);
+  height: 60%;
+  padding: 20px;
+}
+
+#keyboard {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 30%;
+}
+
+.keyboardrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33.3%;
+}
+
+.keyboardBtn {
+  width: 9%;
+  height: 90%;
+  font-size: 3.3em;
+  margin: 0 4px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+}
+
+.cwlSlot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 3 5%;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin: 0 10px;
+  /*   line-height: 0; */
+  /*   padding-bottom: 20px */
+}
+
+/*# sourceMappingURL=hangman.css.map */

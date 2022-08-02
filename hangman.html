@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+   Filename:   hangman.html
+   Author:     Carter Walsh (CST148)
+   Date:       2022-07-30
+   Purpose:
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="hangman.css">
+    <script src="hangman.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="sentencing()">
+
+<input type='button' id='startgame' value='Play' />
+<input type='button' id='resetgame' value='Reset'/>
+
+<div id="categories">
+    <div class="catopt">
+        <input type='radio' id='countries' name='categories' value='countries' class='catbtn' />
+        <label for='countries'>Countries</label>
+    </div>
+    <div class="catopt">
+        <input type='radio' id='animals' name='categories' value='animals' class='catbtn'  />
+        <label for='animals'>Animals</label>
+    </div>
+    <div class="catopt">
+        <input type='radio' id='leonsboys' name='categories' value='leonsboys' class='catbtn' />
+        <label for='leonsboys'>Leon's Boys</label>
+    </div>
+    <div class="catopt">
+        <input type='radio' id='allwords' name='categories' value='allwords' class='catbtn' />
+        <label for='allwords'>All Words</label>
+    </div>
+    <div class="catopt">
+        <input type='radio' id='provinces' name='categories' value='provinces' class='catbtn' />
+        <label for='provinces'>Provinces</label>
+    </div>
+    <div class="catopt">
+        <input type='radio' id='usstates' name='categories' value='usstates' class='catbtn' />
+        <label for='usstates'>US States</label>
+    </div>
+
+</div>
+
+
+<div id='gameboard'>
+
+    <div id='wlSelect'>
+        <div id='currentWord'>
+
+        </div>
+        <div id='keyboard'>
+
+        </div>
+    </div>
+
+</div>
+<div id='hangman'>
+    <div id="hm-head" class="hm-bp"></div>
+    <div id="hm-upper">
+        <div id="hm-left">
+            <div id="hm-arm-L" class="hm-bp arm"></div>
+            <div id="hm-leg-L" class="hm-bp leg"></div>
+        </div>
+        <div id="hm-body" class="hm-bp"></div>
+        <div id="hm-right">
+            <div id="hm-arm-R" class="hm-bp arm"></div>
+            <div id="hm-leg-R" class="hm-bp leg"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
