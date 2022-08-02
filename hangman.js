@@ -359,6 +359,7 @@ function sentencing() {
       $('#resetgame').show();
     }
   });
+  //wtf
   
   
   $('#resetgame').on("click", function () {
